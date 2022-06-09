@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DayLight</title>
+        <style>
+            .content {
+              max-width: 500px;
+              margin: auto;
+            }
+        </style>
+    </head>
+    <body class="content">
+        <h1>DayLight</h1>
+        <form id="Torrent" method="POST" action="/post">
+            <label for="who">Enter URL</label>
+            <input type="url" name="url" value="<%= qs.url %>">
+            <input type="submit" value="Submit"/>
+        </form>
+    </body>
+</html>
