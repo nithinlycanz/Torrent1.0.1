@@ -1,0 +1,34 @@
+{
+  "name": "torrentdownload",
+  "version": "1.0.0",
+  "main": "torrent.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ansi-colors": "^4.1.1",
+    "cli-progress": "^3.10.0",
+    "cliprogress": "^0.0.2",
+    "express": "^4.18.1",
+    "install": "^0.13.0",
+    "magnet-link": "^1.1.3",
+    "node-fetch": "^2.6.1",
+    "node-pre-gyp": "^0.17.0",
+    "parse-magnet-uri": "^4.0.0",
+    "read-torrent": "^1.3.1",
+    "webtorrent-hybrid": "^5.0.2"
+  },
+  "description": "torrent_cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nithinlycanz/torrent_cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nithinlycanz/torrent_cli/issues"
+  },
+  "homepage": "https://github.com/nithinlycanz/torrent_cli#readme"
+}
