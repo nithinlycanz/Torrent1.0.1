@@ -4,6 +4,13 @@
         <title>TORRENTING....</title>
         <title>DayLight</title>
         <style>
+            .span {
+                color: #0dca41;
+            }
+            .input {
+                border-color: #0dca41;
+                color: #6ef0d0;
+            }
             .content {            
                 vertical-align: top;
                 color: #6ef0d0;
@@ -112,9 +119,11 @@
        
         <form id="Torrent" method="POST" action="/post">
             <label for="who" class="txt2">Enter URL</label>
-            <input type="url" name="url" >&nbsp
+            <input type="url" name="url" class="input">&nbsp
             <!-- <input class="btn" type="submit" value="Submit"/> -->
-            <a href="#"  style="--CLR:#1e9bff" onclick="myFunction()"><span>SUBMIT</span><i></i></a>
+            <a href="#"  style="--CLR:#1e9bff" onclick="myFunction()"><span class="span">DOWNLOAD
+                <img src="download_icon.png" width="20" height="20">
+            </span><i></i></a>
         </form>
       
         <!-- <link rel="stylesheet"type="text/css" href="style.css">  -->
