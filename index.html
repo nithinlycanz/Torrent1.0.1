@@ -4,22 +4,72 @@
         <title>TORRENTING....</title>
         <title>DayLight</title>
         <style>
+
+                    /* neon style */
+
+                    .neonText {
+                    color: #fff;
+                    text-shadow:
+                        0 0 7px #fff,
+                        0 0 10px #fff,
+                        0 0 21px #fff,
+                        0 0 42px #0fa,
+                        0 0 82px #0fa,
+                        0 0 92px #0fa,
+                        0 0 102px #0fa,
+                        0 0 151px #0fa;
+                    }
+
+                    input {
+                    animation: pulsate 1.5s infinite alternate;  
+                    border-color: #0bbaa5;
+                    padding: 0.4em;
+                    box-shadow: 0 0 .2rem #fff,
+                                0 0 .2rem #fff,
+                                0 0 2rem #0dca41,
+                                0 0 0.8rem #0dca41,
+                                0 0 2.8rem #0fa,
+                                inset 0 0 1.3rem #0fa; 
+                    }
+
+                    h1 {
+                    font-size: 3.2rem;
+                    color: #6ef0d0;
+                    animation: flicker 1.5s infinite alternate;
+                    display: flex;
+                    justify-content: center;  
+                    }
+
+                    /* Flickering animation */
+                    @keyframes flicker {
+                        
+                    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+                        text-shadow:
+                        0 0 4px #fff,
+                        0 0 11px #fff,
+                        0 0 19px #fff,
+                        0 0 40px #0fa,
+                        0 0 80px #0fa,
+                        0 0 90px #0fa,
+                        0 0 100px #0fa,
+                        0 0 150px #0fa;
+                    
+                    }
+                    
+                    20%, 24%, 55% {        
+                        text-shadow: none;
+                    }    
+                    }
+
+             /* end neon        */
+             
             .span {
                 color: #0dca41;
             }
-            .input {
-                border-color: #0dca41;
-                color: #6ef0d0;
-            }
-            .content {            
-                vertical-align: top;
-                color: #6ef0d0;
-            }
-            .txt {
-              color:  linear-gradient(to right, #0bbaa5 , #0dca41);
-            }
             .txt2 {
-               color: #6ef0d0;
+                color: #6ef0d0;
+
             }
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
                 *
@@ -32,11 +82,24 @@
                 body
                 {
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    /* justify-content: center;
+                    align-items: center;  */
                     min-height: 100vh;
                     background: #27282c ;
                 }
+                .div1 
+                {
+                    display: flex; 
+                    flex-wrap: wrap;
+                    align-content: center;
+                }
+
+                .div2 
+                {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                
                 a
                 {
                     position: relative;
@@ -115,16 +178,19 @@
         </style>
     </head>
     <body>
-        <h1 class="txt2">DayLight</h1>&nbsp &nbsp
-       
-        <form id="Torrent" method="POST" action="/post">
-            <label for="who" class="txt2">Enter URL</label>
+        <div class="div2">
+        <h1>DayLight</h1></div>
+        
+        <div class="div1">
+            
+            <form id="Torrent" method="POST" action="/post">
+            <label for="who" class="txt2">Enter URL</label>&nbsp&nbsp
             <input type="url" name="url" class="input">&nbsp
             <!-- <input class="btn" type="submit" value="Submit"/> -->
             <a href="#"  style="--CLR:#1e9bff" onclick="myFunction()"><span class="span">DOWNLOAD
                 <img src="download_icon.png" width="20" height="20">
             </span><i></i></a>
-        </form>
+        </form></div>
       
         <!-- <link rel="stylesheet"type="text/css" href="style.css">  -->
         <script>
