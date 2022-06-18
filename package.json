@@ -1,18 +1,20 @@
 {
   "name": "torrentdownload",
   "version": "1.0.0",
-  "main": "torrent.js",
+  "main": "link_site.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node link_site.js",
+    "build": "node link_site.js",
+    "eject": "node link_site.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "ansi-colors": "^4.1.1",
-    "cli-progress": "^3.10.0",
-    "cliprogress": "^0.0.2",
+    "cli-progress": "^3.11.1",
     "express": "^4.18.1",
     "install": "^0.13.0",
     "magnet-link": "^1.1.3",
