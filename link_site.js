@@ -24,9 +24,11 @@ router.get('/about',function(req,res){
   res.sendFile(path.join(_dirname +'/index.html'));
 });
 
-router.get('/post',function(req,res){
-    res.sendFile(path.join(_dirname +'/index.html'));
-  });
+// router.use('/post',function(req,res){
+//     res.sendFile(path.join(_dirname +'/index.html'));
+//   });
+
+app.use('/post', express.static(path.join(_dirname, '/')));
 
 router.post('/post', urlencodedParser, function(req,res){
   console.log(req.body);
