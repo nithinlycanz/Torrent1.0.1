@@ -1,6 +1,6 @@
-torrent_cli
+Day_Light
  
- The compleate solution for torrent cli magnet download 
+ The complete solution for torrent cli magnet download 
 
 Installation Guide
 
@@ -25,4 +25,4 @@ Step 4
         $ node torrent.js <Magnet Link>
 
 
-        ----"Thank you"------
+        -----"Thank you"------
