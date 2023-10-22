@@ -84,6 +84,11 @@
                     box-sizing: border-box;
                     font-family: 'Poppins', sans-serif;
                 }
+                a img
+                {   
+                    width: 20px;
+                    height: 20px;
+                }
                 body
                 {
                     display: flex;
@@ -92,12 +97,14 @@
                     min-height: 100vh;
                     background: #27282c ;
                 }
+
                 .div1 
                 {
                     /* display: flex; 
                     
                     flex-wrap: wrap;
                     align-content: center; */
+                   
                     top: 50%;
                     right: 50%;
                     text-align: center;
@@ -107,12 +114,12 @@
 
                 .div2 
                 {
-                    /* position: absolute; */
-                    left: 50%;
-                    top: 50%;
+                    position: absolute;
+                    left: 0%;
+                    top: 10%;
                      transform: translate(250%); 
                     /* border: 5px solid #FFFF00; */
-                    padding: 10px;
+                    /* padding: 10px; */
                 }
                 
                 a
@@ -124,7 +131,7 @@
                     text-transform: uppercase;
                     font-size: 1.5em;
                     letter-spacing: 0.1em;
-                    padding: 10px 30px;
+                    padding: 10px 10px;
                     transition: 0.5s;
                 }
                 a:hover
@@ -145,6 +152,9 @@
                 {
                     position: relative;
                     z-index: 1;
+                   
+                    
+                    /* z-index: 1; */
                 }
                 a i
                 {
@@ -152,6 +162,12 @@
                     inset: 0;
                     display: block;
                 }
+                .icon {
+    /* Add styles to center the image */
+                 display: block;
+                 margin: 0 auto;
+                 width: 50%;}
+}
                 a i::before
                 {
                     content: '';
@@ -203,7 +219,7 @@
             <input type="url" name="url" class="input">&nbsp
             <!-- <input class="btn" type="submit" value="Submit"/> -->
             <a href="#"  style="--CLR:#1e9bff" onclick="myFunction()"><span class="span">DOWNLOAD
-                <img src="download_icon.png" width="20" height="20">
+                <img src="download_icon.png" >
             </span><i></i></a>
         </form></div>
       
