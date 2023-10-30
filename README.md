@@ -1,7 +1,8 @@
 # DayLight
 <div align="center">
  <p align='center'>
-  <p><img src=https://github.com/nithinlycanz/Torrent1.0.1/blob/main/Screenshot%20(1790).png></p>
+  <p><img src=![Screenshot (1790)](https://github.com/nithinlycanz/Torrent1.0.1/assets/81744339/18feee5a-d7ef-4780-b779-a38eb11d37af)
+></p>
  </p>
 </div>
  
