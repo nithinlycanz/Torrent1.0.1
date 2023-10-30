@@ -1,7 +1,7 @@
 # DayLight
 <div align="center">
  <p align='center'>
-  <p><img src=https://github.com/nithinlycanz/nithinlycanz/blob/main/Screenshot%20(1785).png></p>
+  <p><img src=https://github.com/nithinlycanz/Torrent1.0.1/blob/main/Screenshot%20(1790).png></p>
  </p>
 </div>
  
