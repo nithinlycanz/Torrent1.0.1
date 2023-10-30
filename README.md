@@ -1,4 +1,8 @@
-# DayLight
+# DayLight 
+<div allign="right">
+ <img src= https://camo.githubusercontent.com/328e6333f6a787e999a9ad7483ce5f9a9100b7ade4df13d125d4ce18f7a295e1/68747470733a2f2f6665726f73732e6e65742f782f6e6f6465322e676966> 
+ 
+</div>
 <div align="center">
  <p align='center'>
 <div>
@@ -12,7 +16,6 @@
  </p>
 </div>
  
- <img src= https://camo.githubusercontent.com/328e6333f6a787e999a9ad7483ce5f9a9100b7ade4df13d125d4ce18f7a295e1/68747470733a2f2f6665726f73732e6e65742f782f6e6f6465322e676966> 
  
 
 <h2>Installation Guide</h2>
