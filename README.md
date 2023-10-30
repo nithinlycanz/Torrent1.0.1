@@ -1,4 +1,4 @@
-# Day_Light
+# DayLight
 
  
  The complete solution for torrent cli magnet download 
