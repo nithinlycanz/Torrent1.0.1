@@ -1,6 +1,6 @@
 
 
-// import express from "express"; we use lib instead
+// import express from "express";
 const express = require('express');
 const app = express();
 const lib = require("./torrent.cjs");
