@@ -28,7 +28,7 @@ Step 1
 Step 2
         change directory
 
-        $ cd torrent1.0.1
+        $ cd torrent1.20.24
 
 Step 3
         install npm packages
