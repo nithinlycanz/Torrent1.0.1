@@ -4,7 +4,8 @@
   "description": "torrent_cli",
   "main": "link_site.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --recursive test",
+    "bump-version": "npm version patch"
   },
   "keywords": [],
   "author": "",

@@ -4,6 +4,12 @@
         <title>TORRENTING....</title>
         <title>DayLight</title>
         <link href='https://fonts.googleapis.com/css?family=Yellowtail:400' rel='stylesheet' type='text/css'>
+        <div class="lol">
+            <marquee>
+
+                <h1 data-value="NITHINLYCANZ">NITHINLYCANZ</h1>
+            </marquee>
+        </div>
         <style>
 
                    /* neon style */
@@ -70,7 +76,7 @@
              /* end neon        */
              
             .span {
-                color: #0dca41;
+                color: #8b2933;
             }
             .txt2 {
                 color: #aab9fa;
@@ -206,28 +212,106 @@
 
 
         </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="div2">
-        <h1>Day Light</h1></div>
-        
-        <div class="div1">
+            <h1>Day Light</h1></div>
             
-            <form id="Torrent" method="POST" action="/post">
-            <label for="who" class="txt2">Enter URL</label>&nbsp&nbsp
-            <input type="url" name="url" class="input">&nbsp
-            <!-- <input class="btn" type="submit" value="Submit"/> -->
-            <a href="#"  style="--CLR:#1e9bff" onclick="myFunction()"><span class="span">DOWNLOAD
-                <img src="download_icon.png" >
-            </span><i></i></a>
-        </form></div>
-      
-        <!-- <link rel="stylesheet"type="text/css" href="style.css">  -->
-        <script>
+            <div class="div1">
+                
+                <form id="Torrent" method="POST" action="/post">
+                    <label for="who" class="txt2">Enter URL</label>&nbsp&nbsp
+                    <input type="url" name="url" class="input">&nbsp
+                    <!-- <input class="btn" type="submit" value="Submit"/> -->
+                    <a href="#"  style="--CLR:#1e9bff" onclick="myFunction()"><span class="span">DOWNLOAD
+                        <img src="download_icon.png" >
+                    </span><i></i></a>
+                </form></div>
+                <canvas id="c"></canvas>
+                <!-- <link rel="stylesheet"type="text/css" href="style.css">  -->
+                <script>
             function myFunction() {
                 document.getElementById("Torrent").submit();
                 alert("Downloading file, check console");
             }
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let interval = null;
+            
+            document.querySelector("h1").onmouseover = event => { 
+                let iteration = 0;
+    clearInterval(interval);
+
+    interval = setInterval(() => {  
+        event.target.innerText = event.target.innerText
+        .split("")
+        .map((letter, index )=> {
+            if (index < iteration){
+                return event.target.dataset.value[index];
+            }
+            return letters[Math.floor(Math.random() * 26)]
+        })
+        .join("");
+
+        if (iteration >= event.target.dataset.value.length){
+            clearInterval(interval);
+        }
+        iteration += 1 / 3;
+    }, 40);
+}
+
+// geting canvas by Boujjou Achraf
+var c = document.getElementById("c");
+        var ctx = c.getContext("2d");
+
+        //making the canvas full screen
+        c.height = window.innerHeight;
+        c.width = window.innerWidth;
+
+        //chinese characters - taken from the unicode charset
+        var matrix = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+        //converting the string into an array of single characters
+        matrix = matrix.split("");
+
+        var font_size = 10;
+        var columns = c.width/font_size; //number of columns for the rain
+        //an array of drops - one per column
+        var drops = [];
+        //x below is the x coordinate
+        //1 = y co-ordinate of the drop(same for every drop initially)
+        for(var x = 0; x < columns; x++)
+            drops[x] = 1; 
+
+        //drawing the characters
+        function draw()
+        {
+            //Black BG for the canvas
+            //translucent BG to show trail
+            ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+            ctx.fillRect(0, 0, c.width, c.height);
+
+            ctx.fillStyle = "#f4427d";//green text
+            ctx.font = font_size + "px arial";
+            //looping over drops
+            for(var i = 0; i < drops.length; i++)
+            {
+                //a random chinese character to print
+                var text = matrix[Math.floor(Math.random()*matrix.length)];
+                //x = i*font_size, y = value of drops[i]*font_size
+                ctx.fillText(text, i*font_size, drops[i]*font_size);
+
+                //sending the drop back to the top randomly after it has crossed the screen
+                //adding a randomness to the reset to make the drops scattered on the Y axis
+                if(drops[i]*font_size > c.height && Math.random() > 0.975)
+                    drops[i] = 0;
+
+                //incrementing Y coordinate
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 35);
+
         </script>
        </body>
 </html>
